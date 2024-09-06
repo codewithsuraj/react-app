@@ -1,9 +1,9 @@
-import { BsAirplaneFill } from "react-icons/bs";
 import "./App.css";
+import Button from "./components/Button/Button";
 function App() {
   return (
     <div>
-      <BsAirplaneFill color="red" size="40"/>
+      <Button children={"My Button"} onClick={() => console.log("Clicked")} />
     </div>
   );
 }
