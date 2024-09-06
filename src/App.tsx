@@ -1,13 +1,9 @@
-import ListGroup from "./components/ListGroup";
+import { BsAirplaneFill } from "react-icons/bs";
 import "./App.css";
 function App() {
   return (
     <div>
-      <ListGroup
-        items={["New York", "Los Angeles", "San Francisco"]}
-        heading={"Miami"}
-        onSelectItem={(item) => console.log(item)}
-      />
+      <BsAirplaneFill color="red" size="40"/>
     </div>
   );
 }
