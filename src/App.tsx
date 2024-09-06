@@ -1,9 +1,9 @@
 import "./App.css";
-import Button from "./components/Button/Button";
+import Like from "./components/Like/Like";
 function App() {
   return (
     <div>
-      <Button children={"My Button"} onClick={() => console.log("Clicked")} />
+      <Like onClick={() => console.log("Clicked")} />
     </div>
   );
 }
