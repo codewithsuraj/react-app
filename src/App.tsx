@@ -1,21 +1,22 @@
-import { useState } from "react";
 import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
-import Cart from "./components/Cart/Cart";
+import ExpandableText from "./components/ExpandableText/ExpandableText";
 
 function App() {
-  const [cartItems, setCartItems] = useState([
-    "Product 1",
-    "Product 2",
-    "Product 3",
-  ]);
-
-  const handleClear = () => setCartItems([]);
-
   return (
     <div>
-      <NavBar cartItemsCount={cartItems.length} />
-      <Cart cartItems={cartItems} onClear={handleClear} />
+      <ExpandableText maxChars={100}>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita dolor
+        dolorem illo esse corporis minima explicabo nulla sit saepe ex iure
+        libero eligendi corrupti molestiae culpa in pariatur facilis fuga ipsam
+        voluptate laboriosam, illum possimus dignissimos doloremque?
+        Accusantium, voluptates quidem veniam odit qui harum nihil fugit omnis
+        magni sint explicabo molestiae facilis illo, vero iure rerum ea.
+        Reiciendis amet officia rem. Voluptate id animi sit sapiente rem
+        repellendus quod nostrum vitae dolore ea voluptates doloremque ex
+        consequuntur dignissimos repudiandae, delectus facilis modi, ipsum
+        quibusdam magnam provident blanditiis culpa quos! Itaque id vel libero
+        odio reprehenderit. Similique reiciendis molestiae velit laboriosam!
+      </ExpandableText>
     </div>
   );
 }
