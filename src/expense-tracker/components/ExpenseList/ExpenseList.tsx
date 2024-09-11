@@ -6,12 +6,18 @@ interface Expense {
 }
 
 interface Props {
+  category: string;
   expenses: Expense[];
   onDelete: (id: number) => void;
 }
 
-const ExpenseList = ({ expenses, onDelete }: Props) => {
-  if (expenses.length == 0) return null;
+const ExpenseList = ({ category, expenses, onDelete }: Props) => {
+  if (expenses.length == 0)
+    return (
+      <p className="text">
+        No expenses found {category != "" && "in " + category + " category"}
+      </p>
+    );
 
   return (
     <table className="table table-bordered">
