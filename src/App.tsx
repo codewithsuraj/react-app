@@ -1,5 +1,5 @@
 import "./App.css";
-import userService, { User } from "./services/user-service";
+import userService, { User, getUsersPosts } from "./services/user-service";
 import useUsers from "./hooks/useUsers";
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
   };
 
   const addUser = () => {
+    getUsersPosts();
     const originalUsers = [...users];
     const newUser = { id: 0, name: "Suraj" };
     setUsers([newUser, ...users]);
